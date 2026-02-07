@@ -8,3 +8,8 @@ read SECONDNUMBER
 
 SUM=$((FIRSTNUMBER + SECONDNUMBER))
 echo "Sum is : $SUM"
+
+#Array
+FRUITS=("Apple" "Banana" "Guva")
+
+echo "Fruits are: ${FRUIT[$@]}"
