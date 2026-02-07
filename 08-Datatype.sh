@@ -1,14 +1,10 @@
 #!/bin/bash
 
-NUM1=$1
-read $1
+echo "first number is:: "
+read $FIRSTNUMBER
 
-echo "First number is::$1"
+echo "Second number is :: "
+read $SECONDNUMBER
 
-NUM2=$2
-read $2
-
-echo "Second number is ::$2"
-
-SUM=$(($2-$1))
-echo "Sum is $SUM"
+SUM=$(($FIRSTNUMBER+$SECONDNUMBER))
+echo "Sum is : $SUM"
