@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "first number is:: "
-read $FIRSTNUMBER
+read FIRSTNUMBER
 
 echo "Second number is :: "
-read $SECONDNUMBER
+read SECONDNUMBER
 
-SUM=$(($FIRSTNUMBER + $SECONDNUMBER))
+SUM=$((FIRSTNUMBER + SECONDNUMBER))
 echo "Sum is : $SUM"
