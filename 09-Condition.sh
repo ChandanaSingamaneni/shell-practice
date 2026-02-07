@@ -8,8 +8,10 @@ NUMBER=$1
 #ne -> not equal to
 
 if [NUMBER -gt 20]; then
-    echo " print numner greater than 20"
+    echo "Number is greater than 20"
 
+else if[Number -eq 20];then 
+    echo "Number equal to 20"
 else
-    echo " print number less tha 20"
+    echo "Number is less than 20"
 fi
