@@ -5,4 +5,4 @@
 #Array
 FRUITS=("Apple" "Banana" "Guva")
 
-echo "Fruits are: ${FRUITS[$@]}"
+echo "Fruits are: ${FRUITS[@]}"
