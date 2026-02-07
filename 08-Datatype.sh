@@ -10,5 +10,5 @@ read $2
 
 echo "Second number is ::$2"
 
-SUM=(($2-$1))
+SUM=$(($2-$1))
 echo "Sum is $SUM"
