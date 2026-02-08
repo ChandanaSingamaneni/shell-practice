@@ -1,0 +1,30 @@
+#!/bin/bash
+
+USER=$(id -u)
+LOGS_FOLDER=" /var/log/shell-script"
+LOGS_FILE=" /var/log/shell-script/$0.log"
+
+if [ $USER -ne 0 ]; then
+    echo "Please run script with root user"
+    exit 1
+fi
+
+mkdir -p $LOGS_FOLDER
+
+VALIDATE() {
+    if [ $1 -ne 0 ]; then
+        echo " Installaing $2  ... FAILURE"
+        exit 1
+    else
+        echo "Installing $2 ... SUCCESS"
+    fi
+}
+
+dnf install nginx -y &>> $LOGS_FILE
+VALIDATE $? "Installing Nginx"
+
+dnf install mysql -y &>> $LOGS_FILE
+VALIDATE $? "Installing Mysql"
+
+dnf install nodejs -y &>> $LOGS_FILE
+VALIDATE $? "Installing nodejs"
