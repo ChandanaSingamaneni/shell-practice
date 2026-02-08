@@ -10,7 +10,7 @@ fi
 echo "Installing Nginx"
 dnf install nginx -y
 
-if [ $USER -ne 0 ]; then
+if [ $? -ne 0 ]; then
     echo "Installing nginx ... FAILURE"
     exit 1
 else 
@@ -19,7 +19,7 @@ fi
 
 dnf install mysql -y
 
-if [ $USER -ne 0 ]; then
+if [ $? -ne 0 ]; then
     echo "Installing mysql ... FAILURE"
     exit 1
 else 
@@ -28,7 +28,7 @@ fi
 
 dnf install nodejsi -y
 
-if [ $USER -ne 0 ]; then
+if [ $? -ne 0 ]; then
     echo "Installing nodejs ... FAILURE"
     exit 1
 else 
